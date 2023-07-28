@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="soma()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+
+
+
+
+    <div id="output"></div>
+    <script>
+
+        /*escreva uma logica que o usuário entre com um numero
+         e possa clicar em um Butão pra escolher se ele quer somar subtrair dividir ou multiplicar ,
+         ao clicar peça para ele entrar com mais um numero e devolva o resultado na tela     */
+
+         
+        var n1 = parseInt(prompt("digite um numero"));
+
+        function escreve(){
+            var output = document.querySelector('#output');
+            output.innerHTML = n1;
+        }
+
+        function soma(){
+            var n = parseInt(prompt("digite outro numero"));
+            n1 = n + n1 ;
+            escreve();
+        }
+        function subtrair(){
+            var n = parseInt(prompt("digite outro numero"));
+            n1 = n - n1 ;
+            escreve();
+        }
+        function multiplicar(){
+            var n = parseInt(prompt("digite outro numero"));
+            n1 = n * n1 ;
+            escreve();
+        }
+        function dividir(){
+            var n = parseInt(prompt("digite outro numero"));
+            n1 = n / n1;
+            escreve();
+        }
+    </script>
+</body>
+</html>
