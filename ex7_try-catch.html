@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="mostrarAreaAlert()">aleta</button>
+    <button onclick="mostrarAreaoutput()">output</button>
+
+    <div id="output"></div>
+    <script>
+        //exercicío proposto ex7 //try...catch
+
+        /*pedir para o usuário digitar dois números que representam os lados de um retângulo. mostrar na tela a área total.
+        esse código deve ser executado quando a página é aberta e também quando clicar num botão . q que  acontece se o usuário inserir 
+        um dado inválido? */
+
+        function mostrarAreaAlert(){
+            var largura = parseFloat(prompt('digite a largura'));
+
+            var altura = parseFloat(prompt('digite a altura'));
+
+            try{
+                var area = calcularatea(largura , altura);
+
+            }catch(e){
+                area = e;
+            }
+
+            alert('a área total ´' + area);
+        }
+
+        function mostrarAreaoutput(){
+            var largura = parseFloat(prompt('digite a largura'));
+
+            var altura = parseFloat(prompt('digite a altura'));
+
+            try{
+                var area = calcularatea(largura , altura);
+
+            }catch(e){
+                area = e;
+            }
+
+            document.querySelector('#output').innerHTML = 'a área toal é ' + area;
+        }
+
+        function calcularatea(l , a){
+
+            if(l === undefined || a === undefined){
+                throw new error('calcular area precisa recebr dois números');
+            }
+
+            if( isNaN(l) || isNaN(a)){
+                throw new error('apenas números');
+            }
+            return l * a ;
+        }
+    </script>
+</body>
+</html>
