@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <div id="msg"></div>
+        
+        <script>
+             // exercicío proposto ex10
+             
+            /*mostrar na tela( div com um #msg) uma mensagem de boas-vindas, exemplo: bem-vndo, danieel!. o nome do usuário pode ser uma variável cujo valor foi digitado pelo prompt()*/
+            
+            (function(){
+                var nome = prompt('qual seu nome');
+                document.querySelector('#msg').textContent = "Bem-vindo, " + nome;
+                
+            })()
+            
+        </script>
+        
+    </body>
+</html>
